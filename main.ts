@@ -1,94 +1,90 @@
-input.onButtonPressed(Button.AB, function () {
-	
+input.onPinPressed(TouchPin.P0, function () {
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        # . . . .
+        `)
 })
-basic.forever(function () {
+input.onButtonPressed(Button.A, function () {
     basic.showLeds(`
+        # . . . .
         . . . . .
         . . . . .
+        . . . . .
+        . . . . .
+        `)
+})
+input.onGesture(Gesture.LogoUp, function () {
+    basic.showLeds(`
+        # # # # #
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
+})
+input.onGesture(Gesture.TiltLeft, function () {
+    basic.showLeds(`
         . . . . .
         . . . . .
         # . . . .
-        `)
-    basic.showLeds(`
         . . . . .
+        . . . . .
+        `)
+})
+input.onButtonPressed(Button.AB, function () {
+    basic.showLeds(`
+        # . . . .
         . . . . .
         . . . . .
         . # . . .
-        # . . . .
+        . . . . #
         `)
+})
+input.onButtonPressed(Button.B, function () {
     basic.showLeds(`
         . . . . .
         . . . . .
-        . . # . .
-        . # . . .
-        # . . . .
-        `)
-    basic.showLeds(`
         . . . . .
-        . . . # .
-        . . # . .
-        . # . . .
-        # . . . .
+        . . . . .
+        . . . . #
         `)
+})
+input.onPinPressed(TouchPin.P1, function () {
     basic.showLeds(`
         . . . . #
-        . . . # .
-        . . # . .
+        . . . . .
+        . . . . .
+        . . . . .
         . # . . .
-        # . . . .
         `)
-    basic.showLeds(`
-        . . . . #
-        . . . # .
-        . . # . .
-        . # . . .
-        # . . . #
-        `)
-    basic.showLeds(`
-        . . . . #
-        . . . # .
-        . . # . .
-        . # . # .
-        # . . . #
-        `)
-    basic.showLeds(`
-        . . . . #
-        . # . # .
-        . . # . .
-        . # . # .
-        # . . . #
-        `)
-    basic.showLeds(`
-        # . . . #
-        . # . # .
-        . . # . .
-        . # . # .
-        # . . . #
-        `)
-    music.play(music.builtinPlayableSoundEffect(soundExpression.slide), music.PlaybackMode.UntilDone)
+})
+input.onGesture(Gesture.Shake, function () {
     basic.showLeds(`
         . . . . .
         . # . # .
         . . . . .
-        # . . . #
-        . # # # .
+        . # . # .
+        . . . . .
         `)
-    music.play(music.builtinPlayableSoundEffect(soundExpression.hello), music.PlaybackMode.UntilDone)
+})
+input.onGesture(Gesture.TiltRight, function () {
     basic.showLeds(`
         . . . . .
-        . # . # .
+        . . . . .
+        . # . . #
+        . . . . .
+        . . . . .
+        `)
+})
+input.onGesture(Gesture.LogoDown, function () {
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
         . . . . .
         # # # # #
-        . # # # .
         `)
-    music.play(music.builtinPlayableSoundEffect(soundExpression.giggle), music.PlaybackMode.UntilDone)
-    basic.showLeds(`
-        . # . # .
-        . . . . .
-        . # # # .
-        # # . # #
-        . # # # .
-        `)
-    music.play(music.builtinPlayableSoundEffect(soundExpression.mysterious), music.PlaybackMode.UntilDone)
-    music.play(music.createSoundExpression(WaveShape.Noise, 3108, 499, 255, 0, 750, SoundExpressionEffect.None, InterpolationCurve.Linear), music.PlaybackMode.UntilDone)
 })
